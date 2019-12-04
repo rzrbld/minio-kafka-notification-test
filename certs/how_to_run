@@ -1,0 +1,1 @@
+kafkacat -b localhost:9093 -X security.protocol=SSL -X ssl.key.location=client.key -X ssl.certificate.location=client-ca1-signed.crt -X ssl.ca.location=snakeoil-ca-1.crt -L
