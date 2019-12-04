@@ -14,7 +14,7 @@ sleep 80 && \
 echo "minio add host" && \
 bash -c "docker-compose run mc config host add local http://minio:9000/ test testtest123" && \
 echo "minio set test config" && \
-bash -c "docker-compose run mc admin config set local notify_kafka:1 tls_skip_verify=\"on\"  queue_dir=\"\" queue_limit=\"0\" sasl_enable=\"off\" sasl_password=\"\" sasl_username=\"\" tls_client_auth=\"0\" tls_enable=\"on\" client_tls_cert=\"/opt/minio/kafka/client-ca1-signed.crt\" client_tls_key=\"/opt/minio/kafka/client.key\" brokers=\"broker:9093\" topic=\"minio_event_notification\"" && \
+bash -c "docker-compose run mc admin config set local notify_kafka:1 tls_skip_verify=\"on\"  queue_dir=\"\" queue_limit=\"0\" sasl=\"off\" sasl_password=\"\" sasl_username=\"\" tls_client_auth=\"0\" tls=\"on\" client_tls_cert=\"/opt/minio/kafka/client-ca1-signed.crt\" client_tls_key=\"/opt/minio/kafka/client.key\" brokers=\"broker:9093\" topic=\"minio_event_notification\"" && \
 bash -c "docker-compose run mc admin service restart local" && \
 echo "Generating testfiles" && \
 head -c 1MB /dev/urandom > ./payload/testpayload1.txt && \
