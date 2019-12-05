@@ -13,7 +13,7 @@ docker compose that bringing up a kafka cluster with ss\tls auth and a minio ins
  - to stop cd to `minio-kafka-notification-test` repo directory and run `./clean.sh` script
 
 # what it does
- - pulls git repo minio with this PR https://github.com/minio/minio/pull/8593
+ - pulls git repo minio with this PR https://github.com/minio/minio/pull/8609
  - builds minio binary
  - builds docker image with `Dockerfile.dev`
  - generates server and client certificates and also keystores for kafka cluster
