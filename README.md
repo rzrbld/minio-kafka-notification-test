@@ -1,7 +1,7 @@
 # minio-kafka-notification-test
 docker compose that bringing up a kafka cluster with ss\tls auth and a minio instance for testing purposes
 
-# prepequests
+# dependables
  - bash env
  - keytool from Oracle\Open JDK
  - [kafkacat](https://github.com/edenhill/kafkacat/releases) 
