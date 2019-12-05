@@ -2,7 +2,7 @@
 echo "Prepare env"
 mkdir ./payload && \
 echo "Checkout target minio" && \
-git clone https://github.com/rzrbld/minio.git && \
+git clone --branch kafka-events-ssl-auth https://github.com/rzrbld/minio.git && \
 echo "Build up a target minio image" && \
 cd minio && make && docker build -t mytest/minio:test -f Dockerfile.dev . && \
 echo "Generating SSL server and client certs for Kafka" && \
